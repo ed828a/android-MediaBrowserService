@@ -14,21 +14,20 @@
  * limitations under the License.
  */
 
-package com.example.android.mediasession.service;
+package com.example.android.mediasession.service
 
-import android.support.v4.media.session.PlaybackStateCompat;
-import android.support.v4.media.session.MediaSessionCompat;
+import android.support.v4.media.session.PlaybackStateCompat
+import android.support.v4.media.session.MediaSessionCompat
 
-import com.example.android.mediasession.service.players.MediaPlayerAdapter;
+import com.example.android.mediasession.service.players.MediaPlayerAdapter
 
 /**
- * Listener to provide state updates from {@link MediaPlayerAdapter} (the media player)
- * to {@link MusicService} (the service that holds our {@link MediaSessionCompat}.
+ * Listener to provide state updates from [MediaPlayerAdapter] (the media player)
+ * to [MusicService] (the service that holds our [MediaSessionCompat].
  */
-public abstract class PlaybackInfoListener {
+abstract class PlaybackInfoListener {
 
-    public abstract void onPlaybackStateChange(PlaybackStateCompat state);
+    abstract fun onPlaybackStateChange(state: PlaybackStateCompat)
 
-    public void onPlaybackCompleted() {
-    }
+    fun onPlaybackCompleted() {}
 }
